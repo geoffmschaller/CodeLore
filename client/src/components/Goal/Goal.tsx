@@ -1,10 +1,15 @@
 import React, { FunctionComponent } from 'react';
 import styles from './Goal.module.sass';
 
-const Goal: FunctionComponent = props => {
+import WriteUp from '../../interfaces/WriteUp';
+interface Props {
+	writeUp: WriteUp
+}
+
+const Goal: FunctionComponent<Props> = props => {
 	return (
 		<div className={styles.goal}>
-			<span className={styles.bold}>Our Goal:</span> Learn how npm works and create a new project using it. 
+			<span className={styles.bold}>Our Goal:</span> {props.writeUp.goal} 
 		</div>
 	)
 }
