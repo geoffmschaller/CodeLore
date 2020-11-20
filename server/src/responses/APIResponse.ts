@@ -1,7 +1,7 @@
 import { Response } from 'express';
-import APIResponseData from '../interfaces/APIResponseData';
+import APIResponseInterface from '../interfaces/APIResponseInterface';
 
-const APIResponse = (res: Response, data: APIResponseData) => {
+const APIResponse = (res: Response, data: APIResponseInterface) => {
 	return res.json({
 		code: data.code,
 		message: data.message,
