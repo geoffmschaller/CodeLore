@@ -15,8 +15,8 @@ const TextBlock: FunctionComponent<Props> = props => {
 			{
 				values.map((el, index) => {
 					return props.highlight.includes(el)
-						? <span className={styles.bold}>{el} </span>
-						: `${el} `
+						? <span key={index} className={styles.bold}>{el} </span>
+						: <span key={index}>{el} </span>
 				})
 			}
 		</div>

@@ -1,0 +1,57 @@
+.createTags
+
+	.tagHolder
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		align-items: center
+
+		.tag
+			background-color: #5dade2
+			display: flex
+			justify-content: center
+			align-items: center
+			padding: .5rem 1rem
+			border-radius: 6px
+			color: white
+			margin: .5rem
+			cursor: pointer
+			transition: all .2s ease-in-out
+
+			.name
+				padding: 0 1rem
+
+			&:hover
+				background-color: #f1948a
+
+	.addTag
+		padding: 1rem 0
+		display: flex
+		justify-content: center
+		align-items: center
+
+		.tagInput
+			padding: 0 1rem
+			width: 15rem
+			margin-right: 1rem
+
+			input
+				width: 100%
+				border: none
+				border-bottom: 1px solid  #5499c7
+				padding: .5rem
+				text-align: center
+
+				&:focus
+					outline: none
+
+		.addButton
+			cursor: pointer
+			padding: .7rem
+			border-radius: 6px
+			color: white
+			background-color: #58d68d
+			transition: all .2s ease-in-out
+
+			&:hover
+				background-color: #abebc6

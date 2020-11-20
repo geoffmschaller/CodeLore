@@ -1,6 +1,6 @@
 import WriteUp from '../interfaces/WriteUp';
-import { WriteUpType } from '../constants/enums';
-import { WriteUpComponentTypes } from '../constants/enums';
+import { WriteUpType } from '../interfaces/WriteUp';
+import { WriteUpComponentTypes } from '../interfaces/WriteUp';
 import Image from '../assets/images/test_one.png';
 import Image2 from '../assets/images/test_two.png';
 
@@ -78,7 +78,7 @@ const FakeData: Array<WriteUp> = [
 			{
 				type: WriteUpComponentTypes.ImageBlock,
 				image: Image2,
-				label: 'Look at the cool code snippet above'
+				label: 'Look at the cool code snippet above it\'s really cool!'
 			},
 			{
 				type: WriteUpComponentTypes.TextBlock,
