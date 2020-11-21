@@ -1,22 +1,25 @@
 .createType
-	padding: 2rem
-	display: flex
-	justify-content: space-between
+	padding: 2rem 0
+	border-bottom: 1px solid #d5d8dc
 
-	.type
-		padding: 1rem 2rem
-		border: 1px solid  #ebedef
-		margin: 0 1rem
-		cursor: pointer
-		transition: all .2s ease-in-out
-		border-radius: 6px
+	.wrapper
+		display: flex
+		justify-content: space-between
+		padding: 0 2rem
 
-		&:hover
-			background-color: #abebc6
+		.type
+			padding: 1rem 2rem
+			border: 1px solid  #ebedef
+			margin: 0 1rem
+			cursor: pointer
+			transition: all .2s ease-in-out
+
+			&:hover
+				background-color: #abebc6
+				color: white
+				border: 1px solid   #abebc6
+
+		.selected
+			background-color: #58d68d
 			color: white
-			border: 1px solid   #abebc6
-
-	.selected
-		background-color: #58d68d
-		color: white
-		border: 1px solid  #58d68d
+			border: 1px solid  #58d68d

@@ -1,4 +1,5 @@
 import React, { FunctionComponent, useState } from 'react';
+import CreateInstruction from '../CreateInstruction/CreateInstruction';
 import styles from './CreateTags.module.sass';
 
 const CreateTags: FunctionComponent = () => {
@@ -24,6 +25,9 @@ const CreateTags: FunctionComponent = () => {
 
 	return (
 		<div className={styles.createTags}>
+			<CreateInstruction title={'3. Add Article Tags'}>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus laudantium pariatur doloremque voluptas atque modi mollitia molestiae ipsa! Soluta magni quo ab et, unde ullam maxime magnam alias eveniet? Architecto.
+			</CreateInstruction>
 			<div className={styles.tagHolder}>
 				{
 					currentTags.map((tag, index) => {

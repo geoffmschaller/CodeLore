@@ -10,29 +10,33 @@ export enum WriteUpComponentTypes {
 	ImageBlock
 }
 
-export interface ChapterBlock {
+export interface Block {
+	type: WriteUpComponentTypes
+}
+
+export interface ChapterBlock extends Block {
 	type: WriteUpComponentTypes.Chapter,
 	text: string
 }
 
-export interface TextBlock {
+export interface TextBlock extends Block {
 	type: WriteUpComponentTypes.TextBlock,
 	text: string
 	highlight: Array<string>
 }
 
-export interface CMDBlock {
+export interface CMDBlock extends Block{
 	type: WriteUpComponentTypes.CMD,
 	text: string
 }
 
-export interface DefinitionBlock {
+export interface DefinitionBlock extends Block {
 	type: WriteUpComponentTypes.Definition,
 	word: string,
 	meaning: string
 }
 
-export interface ImageBlock {
+export interface ImageBlock extends Block {
 	type: WriteUpComponentTypes.ImageBlock,
 	image: string,
 	label: string

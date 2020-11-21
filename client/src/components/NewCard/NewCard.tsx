@@ -8,8 +8,8 @@ interface Props {
 const NewCard: FunctionComponent<Props> = props => {
 	return (
 		<div className={styles.newCard}>
-			<div className={styles.close} onClick={props.remove}>
-				<i className="fas fa-times"/>
+			<div className={styles.close}>
+				<i className="fas fa-times" onClick={props.remove}/>
 			</div>
 			{props.children}
 		</div>
