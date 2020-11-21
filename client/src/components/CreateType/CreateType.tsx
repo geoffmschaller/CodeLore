@@ -10,7 +10,7 @@ const CreateType: FunctionComponent = () => {
 
 	return (
 		<div className={styles.createType}>
-			<CreateInstruction title={'2. Add a Type Tag'}>
+			<CreateInstruction title={'2. Choose a Write Up Type'}>
 				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat enim nemo corporis voluptas culpa voluptatem repudiandae, exercitationem est atque, hic delectus, omnis quasi dolore animi architecto aperiam a rerum illo?
 			</CreateInstruction>
 			<div className={styles.wrapper}>

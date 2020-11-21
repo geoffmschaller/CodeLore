@@ -48,7 +48,7 @@ const CreateTags: FunctionComponent = () => {
 				<div className={styles.tagInput}>
 					<input
 						type='text'
-						placeholder={"New tag?"}
+						placeholder={"Add New Tag Here ..."}
 						value={currentInput}
 						onChange={(e) => setCurrentInput(e.target.value)}
 					/>

@@ -8,7 +8,7 @@ const CreateGoal: FunctionComponent = () => {
 			<CreateInstruction title={'5. Add a Write Up Goal'}>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, earum vitae dolore saepe nobis quidem repellendus quo, ipsa eum non blanditiis temporibus vel molestias architecto! Ducimus accusamus sit velit voluptates?
 			</CreateInstruction>
-			<input type='text' placeholder="What's the goal?"/>
+			<input type='text' placeholder="Add Write Up Goal Here ..."/>
 		</div>
 	)
 }

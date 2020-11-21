@@ -10,7 +10,7 @@ const CreateImageHeader: FunctionComponent = () => {
 			</CreateInstruction>
 			<div className={styles.upload}>
 				<i className="fas fa-upload" />
-				<div className={styles.text}>Drop Main Header Image Here</div>
+				<div className={styles.text}>Drag & Drop <br/> Main Header Image Here</div>
 			</div>
 		</div>
 	)
