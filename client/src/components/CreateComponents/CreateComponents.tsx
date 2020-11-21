@@ -13,9 +13,11 @@ import CreateInstruction from '../CreateInstruction/CreateInstruction';
 
 const CreateComponents: FunctionComponent = () => {
 
-	const [components, setComponents] = useState<Array<ChapterBlock | TextBlock | CMDBlock | DefinitionBlock | ImageBlock>>([]);
+	const [components, setComponents] = useState<Array<ChapterBlock | TextBlock | CMDBlock | DefinitionBlock | ImageBlock | null>>([]);
+	const [draggedComponent, setDraggedComponent] = useState(-1);
 
-	const generateCard = (element: ChapterBlock | TextBlock | CMDBlock | DefinitionBlock | ImageBlock): React.ReactElement | null => {
+	const generateCard = (element: ChapterBlock | TextBlock | CMDBlock | DefinitionBlock | ImageBlock | null): React.ReactElement | null => {
+		if (element === null) return null;
 		switch (element.type) {
 			case WriteUpComponentTypes.Chapter:
 				return <NewChapterCard />
@@ -42,6 +44,19 @@ const CreateComponents: FunctionComponent = () => {
 		setComponents([...components]);
 	}
 
+	const swap = (target: number) => {
+		if (draggedComponent >= 0) {
+			if (target >= components.length) {
+				var k = target - components.length + 1;
+				while (k--) {
+					components.push(null);
+				}
+			}
+			components.splice(target, 0, components.splice(draggedComponent, 1)[0]);
+			setComponents([...components]);
+		}
+	}
+
 	return (
 		<div className={styles.createComponents}>
 			<CreateInstruction title={'6. Add Write Up Components'}>
@@ -58,7 +73,13 @@ const CreateComponents: FunctionComponent = () => {
 							<i className="fas fa-chevron-down"/>
 							</div>
 						: components.map((comp, index) => {
-							return <NewCard key={index} remove={() => remove(index)}>
+							return <NewCard
+								key={index}
+								remove={() => remove(index)}
+								index={index}
+								swap={swap}
+								set={setDraggedComponent}
+							>
 								{generateCard(comp)}
 							</NewCard>
 						})
