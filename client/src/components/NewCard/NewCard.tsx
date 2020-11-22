@@ -14,16 +14,6 @@ const NewCard: FunctionComponent<Props> = props => {
 		props.set(index);
 	}
 
-	const entering = (event: React.DragEvent, index: number) => {
-		event.preventDefault();
-		//console.log(event)
-	}
-
-	const leaving = (event: React.DragEvent, index: number) => {
-		event.preventDefault();
-		//console.log(event)
-	}
-
 	const drop = (event: React.DragEvent, index: number) => {
 		props.swap(index);
 	}
@@ -32,8 +22,8 @@ const NewCard: FunctionComponent<Props> = props => {
 		<div
 			className={styles.newCard}
 			onDragStart={(e) => drag(e, props.index)}
-			onDragEnter={(e) => entering(e, props.index)}
-			onDragExit={(e) => leaving(e, props.index)}
+			onDragEnter={(e) => e.preventDefault()}
+			onDragExit={(e) => e.preventDefault()}
 			onDragOver={(e) => e.preventDefault()}
 			onDrop={(e) => drop(e, props.index)}
 			draggable

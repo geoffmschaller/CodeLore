@@ -10,38 +10,38 @@ interface Props {
 const CreateBar: FunctionComponent<Props> = props => {
 	return (
 		<div className={styles.createBar}>
-			<div className={styles.item}>
-				<i className="fas fa-books" onClick={() => props.add({
+			<div className={styles.item} onClick={() => props.add({
 					type: WriteUpComponentTypes.Chapter,
 					text: ''
-				})}/>
+				})}>
+				<i className="fas fa-books"/>
 			</div>
-			<div className={styles.item}>
-				<i className="fas fa-font-case" onClick={() => props.add({
+			<div className={styles.item} onClick={() => props.add({
 					type: WriteUpComponentTypes.TextBlock,
 					text: "This is the text",
 					highlight: ['text']
-				})}/>
+				})}>
+				<i className="fas fa-font-case" />
 			</div>
-			<div className={styles.item}>
-				<i className="fas fa-code" onClick={() => props.add({
+			<div className={styles.item} onClick={() => props.add({
 					type: WriteUpComponentTypes.CMD,
 					text: '~ npm run start'
-				})}/>
+				})}>
+				<i className="fas fa-code" />
 			</div>
-			<div className={styles.item}>
-				<i className="fas fa-spell-check" onClick={ () => props.add({
+			<div className={styles.item} onClick={ () => props.add({
 					type: WriteUpComponentTypes.Definition,
 					word: "Word",
 					meaning: "This is the meaning"
-				})}/>
+				})}>
+				<i className="fas fa-spell-check" />
 			</div>
-			<div className={styles.item}>
-				<i className="fas fa-image" onClick={() => props.add({
+			<div className={styles.item} onClick={() => props.add({
 					type: WriteUpComponentTypes.ImageBlock,
 					image: '###',
 					label: "This is the label"
-				})}/>
+				})}>
+				<i className="fas fa-image" />
 			</div>
 		</div>
 	)
